@@ -4,7 +4,7 @@
  * binary_tree_node - entry point
  * @parent: a pointer to the parent node
  * @value: int value to be stored in the created node
- * Return: a pointer to the new node
+ * Return: a pointer to the new node or NULL on failure
 */
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
