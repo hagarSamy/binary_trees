@@ -1,15 +1,4 @@
 #include "binary_trees.h"
-
-/**
- * print_node - prints data of a node
- * @i: int to print
- * Return: void
-*/
-void print_node(int i)
-{
-	printf("%d\n", i);
-}
-
 /**
  * binary_tree_preorder - entry point to goes through a binary tree using
  * pre-order traversal
