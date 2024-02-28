@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * priint_node - prints data of a node
+ * print_node - prints data of a node
  * @i: int to print
  * Return: void
 */
