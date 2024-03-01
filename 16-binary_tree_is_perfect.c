@@ -8,7 +8,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
-	if (binary_tree_balance(tree->left) == binary_tree_balance(tree->right))
+	if (binary_tree_balance(tree->left) == binary_tree_balance(tree->right) &&
+	binary_tree_size(tree->left) == binary_tree_size(tree->right))
 	{
 		return (1);
 	}
@@ -49,4 +50,21 @@ int length(binary_tree_t *parent)
 		return (llength + 1);
 	else
 		return (rlength + 1);
+}
+
+/**
+ * binary_tree_size - measures the size of a tree
+ * @tree: a pointer to the root
+ * Return: size of the tree or 0 if it is null
+*/
+
+size_t binary_tree_size(const binary_tree_t *tree)
+{
+	size_t leftS, rightS;
+
+	if (tree == NULL)
+		return (0);
+	leftS = binary_tree_size(tree->left);
+	rightS = binary_tree_size(tree->right);
+	return (leftS + rightS + 1);
 }
